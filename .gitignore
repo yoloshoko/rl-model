@@ -1,2 +1,3 @@
 frl/
 *.pdf
+__pycache__/
