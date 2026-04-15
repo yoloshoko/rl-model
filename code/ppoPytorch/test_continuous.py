@@ -7,7 +7,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def test():
     ############## Hyperparameters ##############
-    env_name = "BipedalWalker-v2"
+    # env_name = "BipedalWalker-v2"
+    env_name = "BipedalWalker-v3"
     env = gym.make(env_name)
     state_dim = env.observation_space.shape[0]
     action_dim = env.action_space.shape[0]

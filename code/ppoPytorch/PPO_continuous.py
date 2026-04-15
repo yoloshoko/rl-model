@@ -105,7 +105,8 @@ class PPO:
             rewards.insert(0, discounted_reward)
         
         # Normalizing the rewards:
-        rewards = torch.tensor(rewards).to(device)
+        # rewards = torch.tensor(rewards).to(device)
+        rewards = torch.tensor(rewards).float().to(device)
         rewards = (rewards - rewards.mean()) / (rewards.std() + 1e-5)
         
         # convert list to tensor
@@ -138,7 +139,7 @@ class PPO:
 def main():
     ############## Hyperparameters ##############
     env_name = "BipedalWalker-v3"
-    render = True
+    render = False
     solved_reward = 300         # stop training if avg_reward > solved_reward
     log_interval = 20           # print avg reward in the interval
     max_episodes = 10000        # max training episodes
