@@ -1,3 +1,4 @@
 frl/
 *.pdf
 __pycache__/
+*.pth
