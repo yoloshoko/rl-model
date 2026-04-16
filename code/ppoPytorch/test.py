@@ -51,7 +51,7 @@ def test():
             
         print('Episode: {}\tReward: {}'.format(ep, int(ep_reward)))
         ep_reward = 0
-        env.close()
+        # env.close()
     
 if __name__ == '__main__':
     test()
