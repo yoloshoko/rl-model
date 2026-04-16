@@ -5,7 +5,3 @@ __pycache__/
 model/
 runs/
 *.zip
-IMGs/
-Images/
-render_gif/
-imgs/
