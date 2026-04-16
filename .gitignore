@@ -2,3 +2,5 @@ frl/
 *.pdf
 __pycache__/
 *.pth
+model/
+runs/
