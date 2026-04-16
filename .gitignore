@@ -2,11 +2,4 @@ frl/
 *.pdf
 __pycache__/
 *.pth
-model/
-runs/
-*.zip
-IMGs/
-Images/
-render_gif/
-images/
-imgs/
+drlPytorch/
