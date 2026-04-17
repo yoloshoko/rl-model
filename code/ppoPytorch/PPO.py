@@ -63,7 +63,7 @@ class ActorCritic(nn.Module):
         dist = Categorical(action_probs)
         
         action_logprobs = dist.log_prob(action)
-        dist_entropy = dist.entropy()
+        dist_entropy = dist.entropy()# 计算熵
         
         state_value = self.value_layer(state)
         
