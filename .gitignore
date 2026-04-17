@@ -3,3 +3,5 @@ frl/
 __pycache__/
 *.pth
 drlPytorch/
+trained_models/
+tensorboard/
