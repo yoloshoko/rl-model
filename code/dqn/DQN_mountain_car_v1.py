@@ -16,7 +16,7 @@ MEMORY_CAPACITY = 2000
 Q_NETWORK_ITERATION = 100
 BATCH_SIZE = 32
 
-EPISODES = 400
+EPISODES = 1  # default=400
 env = gym.make('MountainCar-v0')# 3个动作，（向左，向右，不动）
 env = env.unwrapped
 NUM_STATES = env.observation_space.shape[0] # 2
@@ -114,11 +114,11 @@ def main():
         step_counter = 0
         while True:
             step_counter +=1
-            env.render()
+            # env.render()
             action = net.choose_action(state)
-            # next_state, reward, done, info = env.step(action)
-            next_state, reward, terminated, truncated, info = env.step(action)
-            done = terminated or truncated  # 只要其中一个是 True，游戏就结束
+            
+            next_state, reward, done, info = env.step(action)
+
             reward = reward * 100 if reward >0 else reward * 5
             net.store_trans(state, action, reward, next_state)#记录当前这组数据
 
