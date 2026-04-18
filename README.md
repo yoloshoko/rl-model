@@ -9,6 +9,7 @@ Code practice for reinforcement learning models
 - gym==0.19.0
 - box2d
 - gym_super_mario_bros==7.3.0
+- gymnasium==0.28.1
 
 You can execute the following code to install gym-related packages.
 ```
@@ -17,8 +18,10 @@ conda install swig
 pip install box2d-py
 pip install gym_super_mario_bros==7.3.0
 conda install ffmpeg -y
+pip install gymnasium==0.28.1
 ```
 
+use `pip show gym` to check the version of gym.
 # gym version
 
 Inconsistencies in code may occur due to gym version updates. For example,
