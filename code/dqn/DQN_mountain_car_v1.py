@@ -43,7 +43,7 @@ class Net(nn.Module):
 class Dqn():
     def __init__(self):
         self.eval_net, self.target_net = Net(), Net()
-        self.memory = np.zeros((MEMORY_CAPACITY, NUM_STATES *2 +2))
+        self.memory = np.zeros((MEMORY_CAPACITY, NUM_STATES *2 +2))  # s+s'+a+r 总共的维度是2|s|+2
         # state, action ,reward and next state
         self.memory_counter = 0
         self.learn_counter = 0
@@ -55,7 +55,7 @@ class Dqn():
     def store_trans(self, state, action, reward, next_state):
         if self.memory_counter % 500 ==0:
             print("The experience pool collects {} time experience".format(self.memory_counter))
-        index = self.memory_counter % MEMORY_CAPACITY
+        index = self.memory_counter % MEMORY_CAPACITY #每次轮回，只记录最新的记录
         trans = np.hstack((state, [action], [reward], next_state))#记录一条数据
         self.memory[index,] = trans
         self.memory_counter += 1
