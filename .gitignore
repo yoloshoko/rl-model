@@ -1,3 +1,4 @@
+code/
 frl/
 *.pdf
 __pycache__/
@@ -6,4 +7,3 @@ drlPytorch/
 trained_models/
 tensorboard/
 output/
-code/
