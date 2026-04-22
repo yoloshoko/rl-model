@@ -31,7 +31,7 @@ class ActorCritic(nn.Module):
                 nn.Linear(64, 32),
                 nn.Tanh(),
                 nn.Linear(32, action_dim),
-                nn.Tanh()
+                nn.Tanh()  # 最后一层使用Tanh，输出范围[-1,1],也可以用softmax，输出到[0,1]
                 )
         # critic
         self.critic = nn.Sequential(
